@@ -33,7 +33,7 @@ form.addEventListener('click', function(e) {
   .then(response => response.text())
   .then(data => {
     alert(data);  // Display the response message
-    form.reset();  // Reset the form after successful submission
+    document.getElementById("contact-form").reset();  // Reset the form after successful submission
   })
   .catch(error => {
     alert('Error: ' + error);  // Show an error if the request fails
