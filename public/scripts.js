@@ -8,6 +8,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Portfolio Item Sections
+document.getElementById("title1").onclick = function() {
+  alert("Clicked");
+};
+
+document.getElementById("title2").onclick = function() {
+  alert("Clicked");
+};
+
+document.getElementById("title3").onclick = function() {
+  alert("Clicked");
+};
+
+document.getElementById("title4").onclick = function() {
+  alert("Clicked");
+};
+
 // Handle form submission via JSON
 const form = document.getElementById('submit');
 form.addEventListener('click', function(e) {

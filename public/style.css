@@ -131,9 +131,25 @@ nav {
 }
 
 .portfolio-item {
-    background: #eee;
+    background: #ff5722;
+    color: white;
     padding: 20px;
     border-radius: 5px;
+    font-weight: bold;
+}
+
+.portfolio-item:hover {
+    user-select: none;
+    background: #ff784e;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.portfolio-contents {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 /* Contact Section */
