@@ -10,6 +10,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Portfolio Item Sections
 document.getElementById("title1").onclick = function() {
+  var c1 = document.getElementById("content1");
+  if (c1.style.display === "none") {
+    c1.style.display = "grid";
+  } else {
+    c1.style.display = "none";
+  };
   alert("Clicked");
 };
 

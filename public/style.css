@@ -152,6 +152,22 @@ nav {
     gap: 20px;
 }
 
+#content1 {
+    display: none;
+}
+
+#content2 {
+    display: none;
+}
+
+#content3 {
+    display: none;
+}
+
+#content4 {
+    display: none;
+}
+
 /* Contact Section */
 .contact {
     padding: 50px 20px;
