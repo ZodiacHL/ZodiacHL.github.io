@@ -16,14 +16,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   toggles.forEach((toggle, index) => {
     toggle.onclick = function () {
-      // Hide all content elements
-      contents.forEach(content => {
-        content.style.display = "none";
-      });
-
-      // Show the corresponding content
       const targetContent = contents[index];
-      targetContent.style.display = "block";
+
+      // Check if the clicked content is already visible
+      if (targetContent.style.display === "block") {
+        // Hide the currently visible content
+        targetContent.style.display = "none";
+      } else {
+        // Hide all other content elements
+        contents.forEach(content => content.style.display = "none");
+
+        // Show the clicked content
+        targetContent.style.display = "block";
+      }
     };
   });
 });
