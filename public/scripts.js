@@ -18,16 +18,22 @@ document.addEventListener("DOMContentLoaded", function () {
     toggle.onclick = function () {
       const targetContent = contents[index];
 
-      // Check if the clicked content is already visible
-      if (targetContent.style.display === "block") {
-        // Hide the currently visible content
-        targetContent.style.display = "none";
+      // If the content is already open, hide it first
+      if (targetContent.classList.contains("open")) {
+        targetContent.classList.remove("open");
       } else {
-        // Hide all other content elements
-        contents.forEach(content => content.style.display = "none");
+        // Hide all other open contents
+        contents.forEach(content => {
+          if (content.classList.contains("open")) {
+            // Close the currently open content with a slide-up effect
+            content.classList.remove("open");
+          }
+        });
 
-        // Show the clicked content
-        targetContent.style.display = "block";
+        // After all other contents have closed, show the clicked content
+        setTimeout(function () {
+          targetContent.classList.add("open");
+        }, 300); // Delay showing the new content until the hide animation finishes
       }
     };
   });

@@ -147,13 +147,20 @@ nav {
 }
 
 .portfolio-contents {
-    display: grid;
+    display: block;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
 .content-items {
-    display: none;
+    max-height: 0; /* Start collapsed */
+    overflow: hidden; /* Hide overflowing content */
+    transition: max-height 0.3s ease-in-out, padding-top 0.3s ease-in-out; /* Smooth slide effect */
+}
+
+.content-items.open {
+    max-height: 200px; /* Adjust based on your content size or dynamically */
+    padding-top: 10px; /* Add padding for content reveal */
 }
 
 /* Contact Section */
