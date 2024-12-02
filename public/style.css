@@ -156,10 +156,13 @@ nav {
     max-height: 0; /* Start collapsed */
     overflow: hidden; /* Hide overflowing content */
     transition: max-height 0.3s ease-in-out, padding-top 0.3s ease-in-out; /* Smooth slide effect */
+    font-size: 18px;
+    max-width: 1000px;
+    margin: 0 auto; /* Text styling */
 }
 
 .content-items.open {
-    max-height: 500px; /* Adjust based on your content size or dynamically */
+    max-height: 10000px; /* Adjust based on your content size or dynamically */
     padding-top: 10px; /* Add padding for content reveal */
 }
 
