@@ -159,7 +159,7 @@ nav {
 }
 
 .content-items.open {
-    max-height: 200px; /* Adjust based on your content size or dynamically */
+    max-height: 500px; /* Adjust based on your content size or dynamically */
     padding-top: 10px; /* Add padding for content reveal */
 }
 
