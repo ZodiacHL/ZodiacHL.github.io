@@ -9,21 +9,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Portfolio Item Sections
-document.getElementById("title1").onclick = function() {
-  alert("Clicked");
-};
+document.addEventListener("DOMContentLoaded", function () {
+  // Get all toggle buttons and content elements
+  const toggles = document.querySelectorAll(".portfolio-item");
+  const contents = document.querySelectorAll(".content-items");
 
-document.getElementById("title2").onclick = function() {
-  alert("Clicked");
-};
+  toggles.forEach((toggle, index) => {
+    toggle.onclick = function () {
+      // Hide all content elements
+      contents.forEach(content => {
+        content.style.display = "none";
+      });
 
-document.getElementById("title3").onclick = function() {
-  alert("Clicked");
-};
-
-document.getElementById("title4").onclick = function() {
-  alert("Clicked");
-};
+      // Show the corresponding content
+      const targetContent = contents[index];
+      targetContent.style.display = "block";
+    };
+  });
+});
 
 // Handle form submission via JSON
 const form = document.getElementById('submit');
