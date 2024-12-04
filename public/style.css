@@ -84,7 +84,11 @@ nav {
 }
 
 .prof-img {
+    padding-top: 50px;
     border-radius: 10%;
+    width: 350px;
+    height: 700px;
+    transform: translate(calc(50% - 150px), 0);
 }
 
 .hero-contents {
