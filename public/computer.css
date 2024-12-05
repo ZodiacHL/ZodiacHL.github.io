@@ -63,8 +63,8 @@ nav {
 .hero {
     height: 100vh;
     /* background: url('MyPhoto.JPG') no-repeat center center/cover; */
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 2;
     justify-content: center;
     align-items: center;
     color: black;
@@ -72,6 +72,7 @@ nav {
 }
 
 .hero-img {
+    grid-column: 1;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -79,24 +80,26 @@ nav {
     text-align: center;
     background-color: #4169E180;
     height: 100vh;
-    width: calc(50% + 150px);
-    transform: translate(-200px, 0);
+    /* width: calc(50% + 150px);
+    transform: translate(-200px, 0); */
 }
 
 .prof-img {
-    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
     border-radius: 10%;
-    width: 350px;
-    height: 700px;
-    transform: translate(calc(50% - 150px), 0);
+    /* transform: translate(calc(50% - 150px), 0); */
 }
 
 .hero-contents {
+    grid-column: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-left: 4px;
 }
 
 .hero h1 {
