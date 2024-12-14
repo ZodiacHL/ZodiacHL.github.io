@@ -18,11 +18,12 @@ a {
 
 /* Header */
 header {
-    position: fixed;
+    display: none;
+    /* position: fixed;
     width: 100%;
     background: #333;
     padding: 10px 0;
-    z-index: 1000;
+    z-index: 1000; */
 }
 
 nav {
