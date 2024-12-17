@@ -1,4 +1,5 @@
 /* Ipad screen styling */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +7,10 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
     color: #333;
     line-height: 1.6;
 }
@@ -81,6 +85,8 @@ nav {
 }
 
 .hero-contents {
+    background: #ffffff70;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,6 +111,7 @@ nav {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .hero .btn:hover {
