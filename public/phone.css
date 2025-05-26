@@ -106,7 +106,7 @@ nav {
 
 .hero .btn {
     padding: 10px 20px;
-    background: #4169E180;
+    background: #2e86c1;
     color: white;
     border: none;
     border-radius: 5px;
@@ -115,7 +115,7 @@ nav {
 }
 
 .hero .btn:hover {
-    background: #4169E160;
+    background: #3498db;
 }
 
 /* About Section */
@@ -155,7 +155,7 @@ nav {
 }
 
 .portfolio-item {
-    background: #4169E180;
+    background: #2e86c1;
     color: white;
     padding: 20px;
     border-radius: 5px;
@@ -164,7 +164,7 @@ nav {
 
 .portfolio-item:hover {
     user-select: none;
-    background: #4169E160;
+    background: #3498db;
     padding: 20px;
     border-radius: 5px;
     font-weight: bold;
