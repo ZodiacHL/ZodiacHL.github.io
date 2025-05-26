@@ -78,7 +78,7 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #4169E180;
+    background-color: #2e86c1;
     height: 50vh;
     margin-top: 50px
 }
@@ -115,7 +115,7 @@ nav {
 .hero .btn {
     padding: 10px 20px;
     /* background: #ff5722; */
-    background: #4169E180;
+    background: #2e86c1;
     color: white;
     border: none;
     border-radius: 5px;
@@ -123,14 +123,14 @@ nav {
 }
 
 .hero .btn:hover {
-    background: #4169E160;
+    background: #3498db;
 }
 
 /* About Section */
 .about {
     padding: 50px 20px;
     text-align: center;
-    background: #f9f9f9;
+    background: #808b96;
     margin-top: 50px;
 }
 
@@ -176,7 +176,7 @@ nav {
 }
 
 .portfolio-item {
-    background: #4169E180;
+    background: #2e86c1;
     color: white;
     padding: 20px;
     border-radius: 5px;
@@ -185,7 +185,7 @@ nav {
 
 .portfolio-item:hover {
     user-select: none;
-    background: #4169E160;
+    background: #3498db;
     padding: 20px;
     border-radius: 5px;
     font-weight: bold;
