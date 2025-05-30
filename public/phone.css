@@ -65,7 +65,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    height: 60vh;
+    height:100vh;
     padding: 25px;
     background: url('MyPhoto.JPG') no-repeat center center/cover;
     display: flex;
@@ -74,10 +74,6 @@ nav {
     align-items: center;
     color: black;
     text-align: center;
-}
-
-.prof-img {
-    display: none;
 }
 
 .hero-img {
