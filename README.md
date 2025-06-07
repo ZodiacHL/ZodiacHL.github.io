@@ -21,4 +21,4 @@ This is a static frontend website built using HTML, CSS, and JavaScript. It is h
 
 ## Usage
 
-You can view the live site here: https://ZodiacHL.github.io/public
+You can view the live site here: `` https://ZodiacHL.github.io/public ``
