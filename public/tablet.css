@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body {
     font-family: "Oswald", serif;
     font-optical-sizing: auto;
@@ -13,11 +19,69 @@ body {
     font-style: normal;
     color: #333;
     line-height: 1.6;
+    overflow-y: auto;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.section-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background: rgba(0,0,0,.4);
+    padding: 0.6rem 1rem;
+    backdrop-filter: blur(8px);
+}
+
+.section-nav a {
+    color: #fff;
+    mix-blend-mode: difference;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.section-nav a:hover,
+.section-nav a:focus {
+    background: rgba(255,255,255,.25);
+    transform: translateY(-1px);
+}
+
+.snap-container {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: auto;
+    scroll-padding-top: 70px;
+}
+
+.page-section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    opacity: 0.85;
+    transform: translateY(20px);
+}
+
+.page-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page-section.footer {
+    min-height: 60vh;
+    padding: 30px 20px;
 }
 
 /* Header */
@@ -171,23 +235,100 @@ nav {
 }
 
 .portfolio-contents {
-    display: block;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    display: none;
 }
 
-.content-items {
-    max-height: 0; /* Start collapsed */
-    overflow: hidden; /* Hide overflowing content */
-    transition: max-height 0.3s ease-in-out, padding-top 0.3s ease-in-out; /* Smooth slide effect */
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto; /* Text styling */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
 }
 
-.content-items.open {
-    max-height: 10000px; /* Adjust based on your content size or dynamically */
-    padding-top: 10px; /* Add padding for content reveal */
+.portfolio-item {
+    background: linear-gradient(135deg, #2e86c1, #3498db);
+    color: white;
+    border: 2px solid transparent;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 18px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #2980b9, #4aa3de);
+}
+
+.project-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1500;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.62);
+    backdrop-filter: blur(4px);
+    overflow-y: auto;
+}
+
+.project-modal.visible {
+    display: flex;
+}
+
+.project-modal-content {
+    width: min(1000px, 94vw);
+    max-height: min(90vh, 860px);
+    overflow-y: auto;
+    background: #fff;
+    color: #202020;
+    border-radius: 1rem;
+    padding: 22px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.15);
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    background: rgba(0,0,0,0.4);
+}
+
+.project-modal-body {
+    display: grid;
+    gap: 15px;
+}
+
+.project-modal-body h3 {
+    margin-top: 0;
+    color: #2e86c1;
+}
+
+.project-modal-body .project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.project-detail {
+    display: none;
 }
 
 .sm2-img {

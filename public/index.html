@@ -20,63 +20,118 @@
 </head>
 <body>
 
+    <nav class="section-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#footer">Contact</a>
+    </nav>
+
+    <main class="snap-container">
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="page-section hero">
         <div class="hero-contents">
             <h1>Welcome to My Portfolio</h1>
-            <p>Hi, I'm Donald Green, an aspiring Cybersecurity specialist.</p>
+            <p>Hi, I'm Donald Green, I use this portfolio not just to showcase my work, but also to document my journey in the field of cybersecurity.</p>
             <a href="#portfolio" class="btn">View My Work</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="page-section about">
         <h2>About Me</h2>
         <section class="about-section">
-            <img src="./CSF-logoBG.png" alt="CSF Logo">
-            <p>Hi, I'm Donald Green! I'm just getting started in cybersecurity, but I'm already excited about where this path is taking me. I'm currently working through the Google Cybersecurity Certificate and building small projects along the way to learn as I go. So far, I’ve created a few beginner tools in Python—like a password strength checker, a simple port scanner, and a file integrity checker—with basic GUIs to make them more user-friendly. I’m especially interested in how everyday tools can help people stay safe online, and I’m always looking to learn more and improve. This portfolio is where I’ll be sharing my journey as I grow my skills and take on new challenges.</p>
+            <p>I'm just getting started in cybersecurity, but I'm already excited about where this path is taking me. I have acquired both the Google Cybersecurity Certificate and the CompTIA Security+ certification. I have also enlisted in the U.S. Army as a 35T (Military Intelligence Systems Maintainer/Integrator) so I can further my skills and come out stronger. I am excited to grow not only as a person but also as a professional in the field of cybersecurity.</p>
         </section>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="page-section portfolio">
         <h2>My Work</h2>
         <div class="portfolio-grid">
-            <div class="portfolio-item" id="title1">Shape Matcher 2</div>
-            <div class="portfolio-item" id="title2">Winston</div>
-            <div class="portfolio-item" id="title3">Bobcat Swap&Shop</div>
-            <div class="portfolio-item" id="title4">Portfolio</div>
-            <div class="portfolio-item" id="title5">Password Strength Checker</div>
-            <div class="portfolio-item" id="title6">Password Manager</div>
-            <div class="portfolio-item" id="title7">Port Scanner</div>
-            <div class="portfolio-item" id="title8">Keylogger</div>
-            <div class="portfolio-item" id="title9">File Integrity Checker</div>
-            <div class="portfolio-item" id="title10">Radiation Game</div>
+            <button class="portfolio-item" data-project="content1">Shape Matcher 2</button>
+            <button class="portfolio-item" data-project="content2">Winston</button>
+            <button class="portfolio-item" data-project="content3">Bobcat Swap&Shop</button>
+            <button class="portfolio-item" data-project="content4">Portfolio</button>
+            <button class="portfolio-item" data-project="content5">Password Strength Checker</button>
+            <button class="portfolio-item" data-project="content6">Password Manager</button>
+            <button class="portfolio-item" data-project="content7">Port Scanner</button>
+            <button class="portfolio-item" data-project="content8">Keylogger</button>
+            <button class="portfolio-item" data-project="content9">File Integrity Checker</button>
+            <button class="portfolio-item" data-project="content10">Radiation Game</button>
         </div>
 
-        <div class="portfolio-contents">
-            <div class="content-items" id="content1"><section><img src="./ShapeMatcher2.png" alt="SM2 Game UI" width="700px" height="350px" class="sm2-img"></section>During my senior year of high school, I enrolled in the AP Computer Science Principles course, where I developed an educational game using Python and the Turtle graphics library. The project was designed to demonstrate my understanding of functions, parameters, iterations, and conditional statements. The game focuses on polygons, helping users learn the names and properties of shapes ranging from triangles to decagons. This project not only deepened my programming skills but also played a role in my success on the AP exam. I plan to revisit and enhance this project, applying the advanced knowledge and skills I have acquired since then.</div>
-            <div class="content-items" id="content2"><section><img src="./Winston.png" alt="Winston the Dinosaur" width="700px" height="350px" class="winston-img"></section>In my AP Computer Science Principles class, I created a project using Python's Turtle graphics library to design an illustration of a dinosaur. This project showcased my ability to break down complex shapes into smaller components and use functions, loops, and coordinates to build intricate designs. Through this exercise, I honed my problem-solving and creative skills while gaining a deeper understanding of graphical programming. The experience reinforced my interest in blending artistic creativity with computational logic, and it remains one of my favorite early programming accomplishments.</div>
-            <div class="content-items" id="content3"><section><img src="./BobcatShop.png" alt="Bobcat Swap&Shop" width="700px" height="350px" class="shop-img"></section>As part of my Environmental Humanities English class, I contributed to the creation of a website for a class-hosted thrift shop focused on promoting sustainability and upcycling. The shop offered upcycled clothing to encourage environmentally conscious practices within our community. My role involved designing and building the website, which provided information about the event and highlgiht the importance of sustainable fashion. This project allowed me to apply my technical skills to a real-world initiative, while also fostering teamwork and raising awareness about sustainability. It was a meaningful experience that combined creativity, technology, and environmental advocacy.</div>
-            <div class="content-items" id="content4"><section><img src="./MyPhoto.JPG" alt="Picture of me" width="700px" height="350px" class="my-img"></section>My portfolio is a dynamic, self-programmed platform designed to showcase my technical skills, creativity, and diverse projects. Built using modern web development tools, it highlights my proficiency in coding, design, and problem-solving. The portfolio features a curated selection of my work, including programming projects, collaborative efforts, and creative designs, with detailed descriptions of each to provide context and insight into my contributions. This platform not only serves as a testament to my technical abilities but also reflects my commitment to continuous learning and growth in the field of technology and design.</div>
-            <div class="content-items" id="content5"><section><img src="./PSC.png" alt="Pass Strength Check" width="700px" height="350px" class="strength-img"></section>A beginner-friendly Python tool that evaluates the strength of user-entered passwords. It checks for common weaknesses like short length, lack of special characters, and dictionary words, providing real-time feedback to help users create more secure passwords.</div>
-            <div class="content-items" id="content6"><section><img src="./PassManager.png" alt="Pass Manager" width="700px" height="350px" class="manager-img"></section>A lightweight graphical password manager built with Python and Tkinter. Users can securely store and organize website credentials, including the site name, username, and password. Designed with simplicity in mind, it offers an intuitive interface for managing personal login data without needing complex features.</div>
-            <div class="content-items" id="content7"><section><img src="./PortScanner.png" alt="Port Scanner" width="700px" height="350px" class="port-img"></section>A lightweight Python-based port scanner that identifies open ports on a target device. It offers a simple interface for users to input IP addresses and returns a list of active ports, aiding in basic network diagnostics and security assessments.</div>
-            <div class="content-items" id="content8"><section><img src="./Keylogger.png" alt="Keylogger" width="700px" height="350px" class="keylog-img"></section>A basic Python keylogger created for cybersecurity education. It records keystrokes and saves them to a local file, demonstrating how logging software works in a controlled, ethical context. Ideal for learning about system vulnerabilities and the importance of proactive digital security.</div>
-            <div class="content-items" id="content9"><section><img src="./FIC.png" alt="File Integrity Check" width="700px" height="350px" class="integrity-img"></section>This tool computes and compares file hashes to ensure data integrity. By generating checksums and verifying them against known values, it helps detect unauthorized changes or corruption in critical files.</div>
-            <div class="content-items" id="content10"><section><img src="./RadGame.png" alt="Radiation Game" width="700px" height="350px" class="rad-img"></section>An interactive educational game developed using HTML, CSS, and JavaScript to teach dental students about radiation. The game explores topics like the history of X-rays and radiation safety in dentistry through engaging lessons and quizzes, blending fun with foundational knowledge in the field.</div>
+        <div id="project-modal" class="project-modal" aria-hidden="true">
+            <div class="project-modal-content" role="dialog" aria-modal="true">
+                <button class="modal-close" aria-label="Close project details">×</button>
+                <div class="project-modal-body"></div>
+            </div>
+        </div>
+
+        <div class="portfolio-details" aria-hidden="true">
+            <article class="project-detail" id="content1">
+                <h3>Shape Matcher 2</h3>
+                <img src="./ShapeMatcher2.png" alt="SM2 Game UI" class="project-image">
+                <p>During my senior year of high school, I enrolled in the AP Computer Science Principles course, where I developed an educational game using Python and the Turtle graphics library. The project was designed to demonstrate my understanding of functions, parameters, iterations, and conditional statements. The game focuses on polygons, helping users learn the names and properties of shapes ranging from triangles to decagons. This project not only deepened my programming skills but also played a role in my success on the AP exam. I plan to revisit and enhance this project, applying the advanced knowledge and skills I have acquired since then.</p>
+            </article>
+            <article class="project-detail" id="content2">
+                <h3>Winston</h3>
+                <img src="./Winston.png" alt="Winston the Dinosaur" class="project-image">
+                <p>In my AP Computer Science Principles class, I created a project using Python's Turtle graphics library to design an illustration of a dinosaur. This project showcased my ability to break down complex shapes into smaller components and use functions, loops, and coordinates to build intricate designs. Through this exercise, I honed my problem-solving and creative skills while gaining a deeper understanding of graphical programming. The experience reinforced my interest in blending artistic creativity with computational logic, and it remains one of my favorite early programming accomplishments.</p>
+            </article>
+            <article class="project-detail" id="content3">
+                <h3>Bobcat Swap&Shop</h3>
+                <img src="./BobcatShop.png" alt="Bobcat Swap&Shop" class="project-image">
+                <p>As part of my Environmental Humanities English class, I contributed to the creation of a website for a class-hosted thrift shop focused on promoting sustainability and upcycling. The shop offered upcycled clothing to encourage environmentally conscious practices within our community. My role involved designing and building the website, which provided information about the event and highly the importance of sustainable fashion. This project allowed me to apply my technical skills to a real-world initiative, while also fostering teamwork and raising awareness about sustainability. It was a meaningful experience that combined creativity, technology, and environmental advocacy.</p>
+            </article>
+            <article class="project-detail" id="content4">
+                <h3>Portfolio</h3>
+                <img src="./MyPhoto.JPG" alt="Picture of me" class="project-image">
+                <p>My portfolio is a dynamic, self-programmed platform designed to showcase my technical skills, creativity, and diverse projects. Built using modern web development tools, it highlights my proficiency in coding, design, and problem-solving. The portfolio features a curated selection of my work, including programming projects, collaborative efforts, and creative designs, with detailed descriptions of each to provide context and insight into my contributions. This platform not only serves as a testament to my technical abilities but also reflects my commitment to continuous learning and growth in the field of technology and design.</p>
+            </article>
+            <article class="project-detail" id="content5">
+                <h3>Password Strength Checker</h3>
+                <img src="./PSC.png" alt="Pass Strength Check" class="project-image">
+                <p>A beginner-friendly Python tool that evaluates the strength of user-entered passwords. It checks for common weaknesses like short length, lack of special characters, and dictionary words, providing real-time feedback to help users create more secure passwords.</p>
+            </article>
+            <article class="project-detail" id="content6">
+                <h3>Password Manager</h3>
+                <img src="./PassManager.png" alt="Pass Manager" class="project-image">
+                <p>A lightweight graphical password manager built with Python and Tkinter. Users can securely store and organize website credentials, including the site name, username, and password. Designed with simplicity in mind, it offers an intuitive interface for managing personal login data without needing complex features.</p>
+            </article>
+            <article class="project-detail" id="content7">
+                <h3>Port Scanner</h3>
+                <img src="./PortScanner.png" alt="Port Scanner" class="project-image">
+                <p>A lightweight Python-based port scanner that identifies open ports on a target device. It offers a simple interface for users to input IP addresses and returns a list of active ports, aiding in basic network diagnostics and security assessments.</p>
+            </article>
+            <article class="project-detail" id="content8">
+                <h3>Keylogger</h3>
+                <img src="./Keylogger.png" alt="Keylogger" class="project-image">
+                <p>A basic Python keylogger created for cybersecurity education. It records keystrokes and saves them to a local file, demonstrating how logging software works in a controlled, ethical context. Ideal for learning about system vulnerabilities and the importance of proactive digital security.</p>
+            </article>
+            <article class="project-detail" id="content9">
+                <h3>File Integrity Checker</h3>
+                <img src="./FIC.png" alt="File Integrity Check" class="project-image">
+                <p>This tool computes and compares file hashes to ensure data integrity. By generating checksums and verifying them against known values, it helps detect unauthorized changes or corruption in critical files.</p>
+            </article>
+            <article class="project-detail" id="content10">
+                <h3>Radiation Game</h3>
+                <img src="./RadGame.png" alt="Radiation Game" class="project-image">
+                <p>An interactive educational game developed using HTML, CSS, and JavaScript to teach dental students about radiation. The game explores topics like the history of X-rays and radiation safety in dentistry through engaging lessons and quizzes, blending fun with foundational knowledge in the field.</p>
+            </article>
         </div>
     </section>
 
     <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Donald Green | All Rights Reserved</p>
+    <footer id="footer" class="page-section footer">
+        <p>&copy; 2026 Donald Green | All Rights Reserved</p>
         <div class="social-links">
             <a target="_blank" href="https://www.linkedin.com/in/donaldgreen2024">LinkedIn</a>
             <a target="_blank" href="https://github.com/ZodiacHL">GitHub</a>
             <a target="_blank" href="mailto:donaldgreen2024@gmail.com">Email</a>
         </div>
     </footer>
+    </main>
 
 </body>
 </html>

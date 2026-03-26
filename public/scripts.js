@@ -9,32 +9,69 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Portfolio Item Sections
+
 document.addEventListener("DOMContentLoaded", function () {
-  // Get all toggle buttons and content elements
-  const toggles = document.querySelectorAll(".portfolio-item");
-  const contents = document.querySelectorAll(".content-items");
+  const portfolioItems = document.querySelectorAll(".portfolio-item");
+  const modal = document.getElementById("project-modal");
+  const modalBody = modal.querySelector(".project-modal-body");
+  const closeButton = modal.querySelector(".modal-close");
 
-  toggles.forEach((toggle, index) => {
-    toggle.onclick = function () {
-      const targetContent = contents[index];
+  function openProject(projectId) {
+    const project = document.getElementById(projectId);
+    if (!project) return;
 
-      // If the content is already open, hide it first
-      if (targetContent.classList.contains("open")) {
-        targetContent.classList.remove("open");
-      } else {
-        // Hide all other open contents
-        contents.forEach(content => {
-          if (content.classList.contains("open")) {
-            // Close the currently open content with a slide-up effect
-            content.classList.remove("open");
-          }
-        });
+    modalBody.innerHTML = project.innerHTML;
+    modal.classList.add("visible");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+    history.replaceState(null, '', '#' + projectId);
+  }
 
-        // After all other contents have closed, show the clicked content
-        setTimeout(function () {
-          targetContent.classList.add("open");
-        }, 300); // Delay showing the new content until the hide animation finishes
-      }
-    };
+  function closeProject() {
+    modal.classList.remove("visible");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+
+    if (window.location.hash && window.location.hash.startsWith("#content")) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+  }
+
+  portfolioItems.forEach(item => {
+    item.addEventListener("click", function (e) {
+      e.stopPropagation();
+      openProject(item.dataset.project);
+    });
   });
+
+  closeButton.addEventListener("click", closeProject);
+
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      closeProject();
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && modal.classList.contains("visible")) {
+      closeProject();
+    }
+  });
+});
+
+// Add active transition state for each fullpage section
+const fullSections = document.querySelectorAll('.page-section');
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      history.replaceState(null, '', '#' + entry.target.id);
+    } else {
+      entry.target.classList.remove('active');
+    }
+  });
+}, { threshold: 0.45 });
+
+fullSections.forEach(section => {
+  sectionObserver.observe(section);
 });
